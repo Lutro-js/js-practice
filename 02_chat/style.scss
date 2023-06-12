@@ -1,0 +1,181 @@
+$cBlack: black;
+$cWhite: white;
+$cLitepink: #D5CBCB;
+$cDarkgray: darkgray;
+
+body {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: $cWhite;
+}
+
+
+/*------------ハンバーガーメニュー--------------------*/
+.menu-icon {
+    background-color: transparent;//無効
+    border: none;//無効
+    outline: none !important;
+    cursor: pointer;
+    margin-right: 30px;
+
+    & > span {
+        background-color: $cLitepink;
+        width: 35px;
+        height: 2px;
+        display: block;
+        margin-bottom: 9px;
+        transition: transform 0.7s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.menu-open {
+    background-color: $cWhite;
+
+    .menu-icon {
+        & > span {
+            background-color: $cLitepink;
+
+            &:nth-child(1) {
+                transition-delay: 70ms;
+                transform: translateY(11px) rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0s;
+                transform: translateX(-18px) scaleX(0);
+            }
+
+            &:nth-child(3) {
+                transition-delay: 140ms;
+                transform: translateY(-11px) rotate(-135deg);
+            }
+        }
+    }
+}
+
+/*------------------ねこたち--------------------*/
+
+.cats_images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.chat-bg {
+    background-color: #d2c6c6;
+    height: 650px;
+    width: 600px;
+    margin-top: 30px;
+
+    & > .cat-message img {
+        height: 50px;
+        z-index: 1;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+.main {
+    display: flex;
+    gap: 300px;
+    background-color: $cDarkgray;
+    height: 720px;
+}
+
+footer {
+    background-color: $cWhite;
+    height: 90px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer small {
+    transform: translateY(300%);
+    position: absolute;
+}
+
+/*--------------humanmessage------------*/
+.human-message {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.message-box {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: $cWhite;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+right: -7px;
+transform: translateY(-50%) rotate(45deg);
+width: 20px;
+height: 20px;
+background-color: $cWhite;
+}
+
+.message {
+color: #333;
+margin-left: 20px;
+}
+
+/*-----------catmessage---------------*/
+
+.message-box-cat {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: $cWhite;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.arrow-cat {
+position: absolute;
+top: 50%;
+left: -7px;
+transform: translateY(-50%) rotate(45deg);
+width: 20px;
+height: 20px;
+background-color: $cWhite;
+}
+
+.message-cat {
+color: #333;
+margin-left: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width:320px) {
+    .main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 30px;
+    }
+
+    .chat-bg {
+        margin-top: 30px;
+    }
+}
