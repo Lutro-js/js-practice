@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+
+    <title>💜数字当てゲームだよ💜</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+        font-family: sans-serif;
+        background-color: lightpink;
+        }
+
+        body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+        }
+        
+        .form input[type="number"] {
+        width: 200px;
+        }
+
+        .lastResult {
+        color: white;
+        padding: 3px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .title h1 {
+            color: rgb(254, 237, 240);
+            text-shadow: 0 0 20px rgb(118, 45, 227);
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .form {
+            text-align: center;
+        }
+
+        .guessSubmit {
+            background-color: rgb(159, 220, 245);
+            border-color: rgb(225, 247, 240);
+            color: #FFF;
+        }
+        
+        
+    </style>
+    </head>
+
+    <body>
+        <img src="images/R.png" alt="">
+    <div class="title"><h1>☆数字あてゲーム☆</h1>  </div>
+
+        <p>1 から 100 までの数字を当ててみて！10 回以内に当てられるでしょうか。<br>選んだ数字が大きいか小さいかを表示します</p>
+    
+    <div class="form">
+        <label for="guessField">予想を入力してください: </label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="予想を入力" class="guessSubmit">
+        
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField');
+        let guessCount = 1;
+        let resetButton;
+
+        function checkGuess() {
+        const userGuess = Number(guessField.value);
+        if (guessCount === 1) {
+            guesses.textContent = '前回の予想: ';
+        }
+
+        guesses.textContent += userGuess + ' ';
+
+        if (userGuess === randomNumber) {
+            lastResult.textContent = 'おめでとう！好きな人と結婚できます！';
+            lastResult.style.backgroundColor = 'pink';
+            lowOrHi.textContent = '';
+            setGameOver();
+        } else if (guessCount === 10) {
+            lastResult.textContent = '!!!GAME OVER!!!';
+            lowOrHi.textContent = '';
+            setGameOver();
+        } else {
+            lastResult.textContent = '間違いです✖';
+            lastResult.style.backgroundColor = 'red';
+            if(userGuess < randomNumber) {
+            lowOrHi.textContent = '今の予想は小さすぎです💦' ;
+            } else if(userGuess > randomNumber) {
+            lowOrHi.textContent = '今の予想は大きすぎです💦';
+            }
+        }
+
+        guessCount++;
+        guessField.value = '';
+        guessField.focus();
+        }
+
+        guessSubmit.addEventListener('click', checkGuess);
+
+        function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        resetButton = document.createElement('button');
+        resetButton.textContent = '新しいゲームを始める';
+        resetButton.style.backgroundColor = 'lightblue';
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener('click', resetGame);
+        }
+
+        function resetGame() {
+        guessCount = 1;
+        const resetParas = document.querySelectorAll('.resultParas p');
+        for (const resetPara of resetParas) {
+            resetPara.textContent = '';
+        }
+
+        resetButton.parentNode.removeChild(resetButton);
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = '';
+        guessField.focus();
+        lastResult.style.backgroundColor = 'white';
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+    </script>
+
+    </body>
+</html>
