@@ -1,0 +1,20 @@
+.accodion {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.accordion-trigger {
+    margin: 0;
+    padding: 10px;
+    display: block;
+    background: #333;
+    color: #fff;
+    border-top: 1px solid #fff;
+}
+
+.accordion-contents {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+}
