@@ -2,7 +2,7 @@
 
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
-}
+}//フォントスタック：左から読み込まれる
 
 img {
   max-width: 100%;
@@ -97,5 +97,6 @@ img {
 
 .sub-title {
   @extend .font-sm;
+  @extend .mb-sm;
   color: $cSubTitle;
 }

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/vendors/css-reset.css"><!--リセットCSS-->
     <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
     </head>
@@ -34,11 +38,68 @@
                 </div>
             </div>
             </div>
+            <div id="main-content">
+                <main>
+                    <section class="houses">
+                        <div>
+                            <h2 class="main-title tween-animate-title">Find Your Houses</h2>
+                            <p class="sub-title tween-animate-title">お気に入りの宿泊先を見つけましょう</p>
+                        </div>
+                        <div class="houses__inner">
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-1.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 1</p>
+                            </div>
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-2.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 2</p>
+                            </div>
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-3.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 3</p>
+                            </div>
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-4.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 4</p>
+                            </div>
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-5.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 5</p>
+                            </div>
+                            <div class="houses__item">
+                                <div class="cover-slide hover-darken ">
+                                    <div class="bg-img-zoom img-bg50" style="background-image: url(images/villa-6.jpg);"></div>
+                                </div>
+                                <p class="houses__title">House 6</p>
+                            </div>
+                            <div class="houses__btn">
+                                <button class="btn slide-bg">もっと詳しく</button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
         </div>
         </div>
     </div>
+    <script src="scripts/vendors/gsap.min.js"></script>
     <script src="scripts/vendors/swiper-bundle.min.js"></script>
     <script src="scripts/libs/hero-slider.js"></script>
+
+    <script src="scripts/vendors/scroll-polyfill.js"></script>
+    <script src="scripts/libs/scroll.js"></script>
+
+    <script src="scripts/libs/text-animation.js"></script>
     <script src="scripts/main.js"></script>
     </body>
 </html>
