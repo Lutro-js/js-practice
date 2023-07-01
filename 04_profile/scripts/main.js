@@ -8,11 +8,13 @@ class MobileMenu {
     this._addEvent();
 }
 
+
 _getEventType() {
     const isTouchCapable = "ontouchstart" in window ||
     (window.DocumentTouch && document instanceof DocumentTouch);
 
     return isTouchCapable ? "touchstart" : "click";
+
 }
 
 _toggle() {
@@ -24,5 +26,6 @@ _addEvent() {
     this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
 }
 }
+
 
 new MobileMenu();

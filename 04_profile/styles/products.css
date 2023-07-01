@@ -158,6 +158,46 @@ body {
   color: #535353;
 }
 
+/* Add this media query for mobile devices */
+@media screen and (max-width: 767px) {
+  /* Adjust the image size to fit within the screen */
+  #images-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Rest of the CSS styles remain the same */
+html {
+  background-color: #fdd8f4;
+  position: relative;
+  min-height: 100%;
+}
+
+#container {
+  position: relative;
+  background-color: #fdd8f4;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+#images-container {
+  background-color: #fdd8f4;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#images-container img {
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+/* Rest of the CSS styles remain the same */
 footer {
   background-color: #fff;
   height: 100px;
