@@ -23,15 +23,19 @@ html {
     box-sizing: border-box; /* 追加 */
   }
 
-  .footer {
-    background-color: #fff;
-    height: 100px;
-    text-align: center;
-    transform: translateY(300px);
-    margin: 0; /* 追加 */
-    padding: 0; /* 追加 */
-    box-sizing: border-box; /* 追加 */
-  }
+//   .footer {
+//     background-color: #fff;
+//     height: 100px;
+//     text-align: center;
+//     transform: translateY(300px);
+//     margin: 0; /* 追加 */
+//     padding: 0; /* 追加 */
+//     box-sizing: border-box; /* 追加 */
+//   }
+
+
+
+
 
 #container {
     position: relative;
@@ -225,6 +229,7 @@ body {
     flex-direction: column;
     // transform: translateX(30%);
     color: #535353;
+    margin-top: 0;
 }
 
 .note-container a{
@@ -263,11 +268,11 @@ th {
     font-weight: bold;
 }
 
-table{
+.table{
     border-collapse: collapse;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 table tr{
