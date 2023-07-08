@@ -1,11 +1,13 @@
 $cWhite: white;
-$cBlack: black;
-$cMenuClose: $cBlack;
-$cMenuOpen: $cBlack;
+$cBlack: #535353;
+$cMenuClose: #535353;
+$cMenuOpen: #535353;
 $cSubTitle: #535353;
+$cMain: #d5e3e7;
+$cText: #94bfca;
 
 html {
-    background-color: #fdd8f4;
+    background-color: $cMain;
     position: relative;
     min-height: 100%;
     margin: 0;
@@ -19,34 +21,38 @@ html {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px; /* 修正 */
-    box-sizing: border-box; /* 追加 */
+    padding: 0 20px; 
+    box-sizing: border-box; 
+
+
+
+    &-inner {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        & > h1 {
+            font-family: 'Vibes', cursive;
+            color: #535353;
+        }
+
+        & > img {
+            width: 50px;
+            height: 100%;
+        }
+    }
   }
-
-//   .footer {
-//     background-color: #fff;
-//     height: 100px;
-//     text-align: center;
-//     transform: translateY(300px);
-//     margin: 0; /* 追加 */
-//     padding: 0; /* 追加 */
-//     box-sizing: border-box; /* 追加 */
-//   }
-
-
-
 
 
 #container {
     position: relative;
-    background-color: #fdd8f4;
-    // height: 200vh;
+    background-color: $cMain;
     z-index: 2;
     transition: all 0.5s;
 }
 
 #images-container {
-    background-color: #fdd8f4;
+    background-color:  $cMain;
     margin-top: 100px;
     margin-bottom: 100px;
     height: 100%;
@@ -63,7 +69,7 @@ html {
 
 .header-title {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Vibes', cursive;
     
     
 }
@@ -207,7 +213,7 @@ body {
     font-family: 'Vibes', cursive;
     color: #535353;
     font-size: 42px;
-    text-decoration: underline dashed #ec5dc8;
+    text-decoration: underline dashed #9ac7d3;
 }
 
 .profile {
@@ -218,7 +224,7 @@ body {
 }
 
 .profile a {
-    color: #ec5dc8;
+    color: $cText;
     text-decoration: none;
 }
 
@@ -233,7 +239,7 @@ body {
 }
 
 .note-container a{
-    color: #ec5dc8;
+    color: $cText;
     text-decoration: none;
 }
 
@@ -258,7 +264,7 @@ body {
 .contents__title{
     font-family: 'Vibes', cursive;
     color: #535353;
-    text-decoration: underline dashed #ec5dc8;
+    text-decoration: underline dashed $cText;
     font-size: 42px;
 }
 
@@ -287,7 +293,7 @@ table th{
     position: relative;
     text-align: left;
     width: 30%;
-    background-color:  #FFAAEB;
+    background-color:  $cText;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
@@ -301,7 +307,7 @@ table th:after{
     position: absolute;
     top:calc(50% - 10px);
     right:-10px;
-    border-left: 10px solid  #FFAAEB;
+    border-left: 10px solid $cText;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
