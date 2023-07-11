@@ -13,6 +13,8 @@ html {
     margin: 0;
 }
 
+
+
 .header {
     background-color: $cWhite;
     height: 100px;
@@ -59,7 +61,7 @@ html {
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     & > img {
         border-radius: 20px;
         width: 400px;
@@ -83,13 +85,13 @@ html {
     display: flex;
     justify-content: space-between;
     & > h1 {
-        margin-left: 30px;
-        font-family: 'Vibes', cursive;
+        margin-left: 10px;
+        font-family: 'Times New Roman', Times, serif;
         font-size: 32px;
         color: $cSubTitle;
     }
     & > .mobile-menu__btn {
-        margin-right: 30px;
+        margin-right: 10px;
     }
 }
 
@@ -210,7 +212,7 @@ body {
 .hanatosu {
     text-align: center;
     margin-top: 250px;
-    font-family: 'Vibes', cursive;
+    font-family: cursive;
     color: #535353;
     font-size: 42px;
     text-decoration: underline dashed #9ac7d3;
@@ -233,7 +235,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // transform: translateX(30%);
     color: #535353;
     margin-top: 0;
 }
@@ -256,9 +257,10 @@ body {
     transform: translateY(200px);
 }
 
-#skill{
+.skill{
     text-align: center;
     margin-top: 250px;
+    font-family: 'Times New Roman', Times, serif;
     }
 
 .contents__title{
@@ -333,18 +335,79 @@ footer {
     }
 
 @media screen and (max-width:390px){
-    .note {
-        margin-right: 20px;
-        margin-left: 20px;
+    .plofile {
+        p {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
     }
 }
 
 /* スマートフォン向けスタイル */
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 390px) {
     /* タイトルのスタイル */
+    html {
+        margin: 0;
+    }
+
+    .header-inner {
+        & > img {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
     .contents__title {
         font-size: 24px;
         margin-top: 20px;
+    }
+
+    .note {
+        margin: 12px;
+    }
+
+    .skill {
+        margin-right: 12px;
+        margin-left: 12px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    footer {
+            width: 100%;
+        }
+
+        .hanatosu {
+            font-size: 36px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .contents__title {
+            font-size: 36px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+    .header {
+        padding: 10px;
+        & > h1 {
+            margin-left: 0px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 36px;
+            color: $cSubTitle;
+        }
+        & > .mobile-menu__btn {
+            margin-right: 0px;
+        }
+    }
+
+    .mobile-menu {
+        position: fixed;
+        right: 0;
+        top: 30px;
+        width: 200px;
+    }
+
+    .mobile_menu__link {
+        margin-right: 0;
     }
 
     /* テーブルのスタイル */
