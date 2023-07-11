@@ -72,7 +72,7 @@ html {
   margin-left: 10px;
   font-family: "Times New Roman", Times, serif;
   font-size: 32px;
-  color: white;
+  color: #c9bfbf;
 }
 .header > .mobile-menu__btn {
   margin-right: 10px;
@@ -133,7 +133,7 @@ body {
 .mobile-menu__link {
   display: block;
   margin-top: 30px;
-  color: white;
+  color: #c9bfbf;
   text-decoration: none;
 }
 
@@ -188,7 +188,7 @@ body {
 .sub-title {
   display: block;
   font-size: 14px;
-  color: white;
+  color: #c9bfbf;
 }
 
 #myCanvas {
@@ -373,7 +373,7 @@ footer {
     margin-left: 0px;
     font-family: "Times New Roman", Times, serif;
     font-size: 36px;
-    color: white;
+    color: #c9bfbf;
   }
   .header > .mobile-menu__btn {
     margin-right: 0px;

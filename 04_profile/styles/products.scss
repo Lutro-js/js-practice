@@ -27,13 +27,16 @@ html {
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
-    & > img {
-        border-radius: 20px;
-        width: 400px;
-        height: 400px;
-    }
+
+
+
 }
+
+.img3 {
+    height: 400px;
+    width: 400px;
+}
+
 
 .header-title {
     text-align: center;
@@ -170,52 +173,30 @@ body {
     color: $cSubTitle;
 }
 
-/* Add this media query for mobile devices */
-@media screen and (max-width: 767px) {
-    /* Adjust the image size to fit within the screen */
-    #images-container img {
-        width: 100%;
-        height: auto;
-    }
-    }
-
-    /* Rest of the CSS styles remain the same */
-    html {
-    background-color: #fdd8f4;
-    position: relative;
-    min-height: 100%;
-    }
-
-    #container {
-    position: relative;
-    background-color: #fdd8f4;
-    z-index: 2;
-    transition: all 0.5s;
-    }
-
-    #images-container {
-    background-color: #fdd8f4;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    }
-
-    #images-container img {
-    border-radius: 20px;
-    width: 400px;
-    height: 400px;
-    }
-
-    /* Rest of the CSS styles remain the same */
-
 footer {
     background-color: #fff;
     height: 100px;
     text-align: center;
-    // transform: translateY(10px);
+    transform: translateY(300px);
     
+}
+
+#copyright {
+    transform: translateY(70px);
+    }
+
+/* Add this media query for mobile devices */
+@media screen and (max-width: 320px) {
+    #images-container .img1, .img2, .img3, .img4, .img5 {
+    width: 400px;
+    height: 400px;
+    }
+
+    .img, .img4 {
+        margin: 10px;
+    }
+
+    body {
+        margin: 10px;
+    }
 }
