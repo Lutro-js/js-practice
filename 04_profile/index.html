@@ -47,7 +47,10 @@
             </ul>
         </nav>
         </header>
+
         <main>
+            <canvas id="myCanvas"></canvas>
+
             <h1 class="hanatosu">HANATOSU</h1>
             <div class="profile">
                 <p class="note">               
@@ -62,27 +65,25 @@
                     <a href="https://www.resume.id/ltrnrt">RESUME</a>
                     で経歴をご覧ください.</p>
             </div>
-                <section class="skill">
+                <div class="skill">
                 <h1 class="contents__title" id="link">SKILL</h1>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <th>実機</th>
-                            <td>Windows</td>
-                        </tr>
-                        <tr>
-                            <th>プログラミング言語</th>
-                            <td>HTML/CSS/JavaScript</td>
-                        </tr>
-                        <tr>
-                            <th>その他（DB,ツール等）</th>
-                            <td>Ai/Ps/Ae/ProCreate/Figma/<br>GitHub/MySQL</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-                
-            
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>実機</th>
+                                <td>Windows</td>
+                            </tr>
+                            <tr>
+                                <th>プログラミング言語</th>
+                                <td>HTML/CSS/JavaScript</td>
+                            </tr>
+                            <tr>
+                                <th>その他（DB,ツール等）</th>
+                                <td>Ai/Ps/Ae/ProCreate/Figma/<br>GitHub/MySQL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="sns-list">
                     <a href="https://github.com/Lutro-js"><img src="images/icon-github.png" alt="GitHubのアイコン"></a>
                     <a href="https://twitter.com/ltrnrt_k"><img class="icon-twitter" src="images/icon-twitter.png" alt="Twitterのアイコン"></a>
@@ -95,5 +96,12 @@
     </footer>
     
     <script src="scripts/main.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/main2.js"></script>
 </body>
 </html>
