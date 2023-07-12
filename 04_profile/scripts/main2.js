@@ -13,12 +13,14 @@ function init() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
 
+
   // シーンを作成
   const scene = new THREE.Scene();
 
   // カメラを作成
   const camera = new THREE.PerspectiveCamera(45, width / height);
   //   camera.position.z = 2000;
+
 
   // 球体作成
   const geometry = new THREE.SphereGeometry(300, 30, 30);
